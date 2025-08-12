@@ -2,10 +2,15 @@
 	let todos: any = [];
 
 	let inputValue = '';
-	let handleSubmit = () => {
+	const handleSubmit = () => {
 		todos = [...todos];
-		todos.push({todoText: inputValue, Id: crypto.randomUUID()});
-        console.log(todos);
+		todos.push({ todoText: inputValue, Id: crypto.randomUUID() });
+		inputValue = '';
+		console.log(todos);
+	};
+
+	const handleDelete = (id: string) => {
+		todos = todos.filter((item: any) => item.Id !== id);
 	};
 </script>
 
@@ -15,5 +20,8 @@
 </form>
 
 {#each todos as todo}
-	<p>{todo.todoText}</p>
+	<div class="flex flex-row">
+		<div>{todo.todoText}</div>
+		<button on:click={() => handleDelete(todo.Id)}>X</button>
+	</div>
 {/each}
