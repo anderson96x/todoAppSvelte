@@ -17,7 +17,7 @@
 </script>
 
 <div class="mt-15 h-full w-full justify-items-center">
-	<h1 class="m-5 text-8xl text-white drop-shadow-lg" style="font-family: 'Ephesis'">To-do list</h1>
+	<h1 class="m-5 text-5xl text-white drop-shadow-lg">To-do list</h1>
 
 	<form on:submit={handleSubmit}>
 		<div class="flex w-100 flex-row">
@@ -36,4 +36,10 @@
 			<Button class="h-10 w-10" color="red" onclick={() => handleDelete(todo.Id)}>X</Button>
 		</div>
 	{/each}
+
+	{#if todos.length == 0}
+		<div class="mt-15">
+			<img src="/img/doodle1.png" alt="Lady sitting at couch" />
+		</div>
+	{/if}
 </div>
