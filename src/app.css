@@ -15,6 +15,31 @@
   }
 }
 
+@theme {
+  --color-primary-50: #000000;
+  --color-primary-100: #94c5cc;
+  --color-primary-200: #94c5cc;
+  --color-primary-300: #94c5cc;
+  --color-primary-400: #94c5cc;
+  --color-primary-500: #94c5cc;
+  --color-primary-600: #94c5cc;
+  --color-primary-700: #94c5cc;
+  --color-primary-800: #94c5cc;
+  --color-primary-900: #FFFFFF;
+
+  --color-secondary-50: #000000;
+  --color-secondary-100: #000000;
+  --color-secondary-200: #000000;
+  --color-secondary-300: #000000;
+  --color-secondary-400: #000000;
+  --color-secondary-500: #000000;
+  --color-secondary-600: #FFFFFF;
+  --color-secondary-700: #FFFFFF;
+  --color-secondary-800: #FFFFFF;
+  --color-secondary-900: #FFFFFF;
+}
+
+
 @font-face {
   font-family: "Poppins";
   src: url('/fonts/Poppins-Regular.ttf') format('truetype');

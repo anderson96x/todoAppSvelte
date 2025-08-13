@@ -1,4 +1,5 @@
 <script lang="ts">
+	import TodoTitle from '$lib/Components/TodoTitle.svelte';
 	import { Button, Input } from 'flowbite-svelte';
 
 	let todos: any = [];
@@ -8,7 +9,6 @@
 		todos = [...todos];
 		todos.push({ todoText: inputValue, Id: crypto.randomUUID() });
 		inputValue = '';
-		console.log(todos);
 	};
 
 	const handleDelete = (id: string) => {
@@ -17,12 +17,12 @@
 </script>
 
 <div class="mt-15 h-full w-full justify-items-center">
-	<h1 class="m-5 text-5xl text-white drop-shadow-lg">To-do list</h1>
+	<TodoTitle />
 
 	<form on:submit={handleSubmit}>
 		<div class="flex w-100 flex-row">
 			<Input type="text" bind:value={inputValue} />
-			<Button class="ms-3" type="submit" color="blue">Add</Button>
+			<Button class="ms-3" type="submit" color="primary">Add</Button>
 		</div>
 	</form>
 
